@@ -6,7 +6,7 @@ cat << EOF > /etc/systemd/system/camera_save_tools.service
 Description=Camera Save Tools
 
 [Service]
-ExecStart=/usr/bin/node $PWD/index.js > $PWD/log.log
+ExecStart=/usr/bin/node $PWD/index.js > $PWD/log
 WorkingDirectory=$PWD
 Restart=always
 User=root
