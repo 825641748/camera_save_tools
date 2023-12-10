@@ -138,7 +138,7 @@ async function checkDiskUsage(thresholdPercentage) {
 		const usedSpace = totalSpace - usage.free;
 		const usedPercentage = (usedSpace / totalSpace) * 100;
 		log(LOG.INFO,
-			`checkDiskUsage: 总空间：${totalSpace} bytes; 占用空间：${usedSpace} bytes; 利用率：{usedPercentage.toFixed(2)}%`
+			`checkDiskUsage: 总空间：${totalSpace} bytes; 占用空间：${usedSpace} bytes; 利用率：${usedPercentage.toFixed(2)}%`
 		);
 		return usedPercentage >= thresholdPercentage;
 	} catch (error) {
