@@ -99,3 +99,48 @@ sync start -ldir "/mnt/sda1/project/camera_save_tools1.0/save" -pdir "/camera" -
 ```
 
 ## 
+
+## Linux后台启动
+
+建议结合nohup进行启动。
+
+```shell
+vi sync.sh
+```
+
+
+
+sync.sh脚本，内容如下
+
+```shell
+# 指定refresh token用于登录
+aliyunpan login -RefreshToken=9078907....adg9087
+
+# 上传下载链接类型：1-默认 2-阿里ECS环境
+aliyunpan config set -transfer_url_type 1
+
+# 指定配置参数并进行启动
+# 支持的模式：upload(备份本地文件到云盘),download(备份云盘文件到本地),sync(双向同步备份)
+aliyunpan sync start -ldir "/mnt/sda1/project/camera_save_tools1.0/save" -pdir "/camera" -mode "upload" -step scan
+aliyunpan sync start -ldir "/mnt/sda1/project/camera_save_tools1.0/save" -pdir "/camera" -mode "upload"
+```
+
+
+
+增加脚本执行权限
+
+```shell
+chmod +x sync.sh
+```
+
+
+
+然后启动该脚本进行后台运
+
+```shell
+nohup ./sync.sh >/dev/null 2>&1 &
+```
+
+
+
+### 
