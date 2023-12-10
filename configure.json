@@ -1,0 +1,20 @@
+{
+	"threshold":60,
+	"logFilePath":"log",
+	"videoTime":600,
+	"savePath":"save",
+	"devices":[
+		{
+			"name":"hikvision",
+			"protocol":"rtsp",
+			"url":"rtsp://",
+			"videoTime":600
+		},
+		{
+			"name":"ipcam",
+			"protocol":"rtmp",
+			"url":"rtmp://",
+			"videoTime":600
+		}
+	]
+}
