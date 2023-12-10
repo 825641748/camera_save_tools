@@ -52,7 +52,6 @@ sudo curl -fsSL http://file.tickstep.com/apt/pgp | gpg --dearmor | sudo tee /etc
 aliyunpan
 ```
 
-![image-20231210215107583](C:\Users\NHT\AppData\Roaming\Typora\typora-user-images\image-20231210215107583.png)
 
 ## 如何获取RefreshToken
 
@@ -87,8 +86,6 @@ aliyunpan > login -RefreshToken=32994cd2c43...4d505fa79
 ***注意：如果同步目录下有非常多的文件，最好在首次备份前先运行一次scan任务，等scan任务完成并建立起同步数据库后，再正常启动同步任务。这样同步任务可以更加快速同步并且能有效避免同步重复文件。***
 
 例如：将本地视频保存目录 `/mnt/sda1/project/camera_save_tools1.0/save` 中的文件备份上传到云盘目录 `/备份盘/camera`
-
-![image-20231210215431475](C:\Users\NHT\AppData\Roaming\Typora\typora-user-images\image-20231210215431475.png)
 
 
 
