@@ -1,0 +1,24 @@
+{
+  "name": "ZXCameraSaveTools",
+  "version": "1.0.0",
+  "description": "录制rtmp和rtsp协议的视频到本地",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "魏泽鑫",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "diskusage": "^1.2.0",
+    "form-data": "^4.0.0",
+    "fs": "^0.0.1-security",
+    "moment": "^2.29.4",
+    "os": "^0.1.2",
+    "path": "^0.12.7",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "uglify-js": "^3.17.4"
+  }
+}
