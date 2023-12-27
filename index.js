@@ -64,7 +64,7 @@ async function recordStream(streamType, streamUrl, recordingDuration, interval, 
 		checkPath(filePath);
 		const fileName = moment().format('YYYY-MM-DD_HH-mm-ss');
 		const command =
-			`ffmpeg -i ${streamUrl} ${streamType==='rtmp'?'-c:v copy -c:a aac':'-c copy'} -t ${recordingDuration} ${path.join(filePath, fileName)}.mp4`
+			`ffmpeg -i ${streamUrl} -c:v copy -c:a aac -t ${recordingDuration} ${path.join(filePath, fileName)}.mp4`
 		const output = await executeCommand(command);
 		log(LOG.INFO, `recordStream: ${fileName}.mp4 录制完成!`);
 		// 检查磁盘空间是否不足
