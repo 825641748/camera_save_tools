@@ -8,6 +8,8 @@ cd camera_save_tools
 #安装所需环境
 apt install ffmpeg nodejs npm
 npm install
+#为install.sh增加运行权限
+chmod 777 ./install.sh
 #运行脚本
 ./install.sh
 ```
